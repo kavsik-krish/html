@@ -1,15 +1,13 @@
-# function which return reverse of a string
+# function which returns reverse of a string
 
 def isPalindrome(s):
-	return s == s[::-1]
-
+    return s == s[::-1]
 
 # Driver code
 s = "malayalam"
-ans = isPalindro(s)
+ans = isPalindrome(s)
 
 if ans:
-	print("Yes")
+    print("Yes")
 else:
-	print("No")
-
+    print("No")
