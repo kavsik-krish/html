@@ -9,24 +9,16 @@ terraform {
 }
 
 provider "google" {
-  credentials = "keys.json"
-  project     = "jbk"
-  region      = "jg"
+  credentials = file("keys.json")
+  project     = "sdbs"
+  region      = "sdb"
 }
 
-resource "google_pubsub_topic" "jin" {
-  name    = "jin"
-  project = "jbk"
-  region  = "us-central1-c"
-}
-
-resource "google_pubsub_subscription" "nhb" {
-  name    = "nhb"
-  topic   = google_pubsub_topic.jin.id
-  project = "jbk"
-  region  = "us-central1-c"
-  ack_deadline_seconds = 77
-  push_config {
-    push_endpoint = "hhb"
+resource "google_sql_database_instance" "sdvs" {
+  name     = "sdvs"
+  database_version = "BSZD"
+  region  = "sdb"
+  settings {
+    tier = "db-custom-1-3840"
   }
 }
