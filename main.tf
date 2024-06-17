@@ -10,21 +10,23 @@ terraform {
 
 provider "google" {
   credentials = "keys.json"
-  project     = "xfbb"
-  region      = "fsbfsb"
+  project     = "jbk"
+  region      = "jg"
 }
 
-resource "google_pubsub_topic" "szdv" {
-  name     = "szdv"
-  location = "us-central1-c"
+resource "google_pubsub_topic" "jin" {
+  name    = "jin"
+  project = "jbk"
+  region  = "us-central1-c"
 }
 
-resource "google_pubsub_subscription" "sdbbf" {
-  name          = "sdbbf"
-  topic         = google_pubsub_topic.szdv.id
-  ack_deadline_seconds = 56
+resource "google_pubsub_subscription" "nhb" {
+  name    = "nhb"
+  topic   = google_pubsub_topic.jin.id
+  project = "jbk"
+  region  = "us-central1-c"
+  ack_deadline_seconds = 77
   push_config {
-    push_endpoint = "fbnb"
+    push_endpoint = "hhb"
   }
-  location = "us-central1-c"
 }
