@@ -10,15 +10,14 @@ terraform {
 
 provider "google" {
   credentials = file("keys.json")
-  project     = "sdbs"
-  region      = "sdb"
+  project     = "hjb"
 }
 
-resource "google_sql_database_instance" "sdvs" {
-  name     = "sdvs"
-  database_version = "BSZD"
-  region  = "sdb"
-  settings {
-    tier = "db-custom-1-3840"
-  }
+resource "google_cloudfunctions_function" "default" {
+  name     = "oijijn"
+  runtime  = "jnkh h"
+  entry_point = "jknh"
+  source_archive_bucket = "jkh hj"
+  trigger_http = true
+  region = "hbjbk"
 }
