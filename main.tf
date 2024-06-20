@@ -10,14 +10,15 @@ terraform {
 
 provider "google" {
   credentials = file("keys.json")
-  project     = "hjb"
+  project     = "hbbkjh"
 }
 
-resource "google_cloudfunctions_function" "default" {
-  name     = "oijijn"
-  runtime  = "jnkh h"
-  entry_point = "jknh"
-  source_archive_bucket = "jkh hj"
-  trigger_http = true
-  region = "hbjbk"
+resource "google_pubsub_topic" "trgv" {
+  name = "trgv"
+}
+
+resource "google_pubsub_subscription" "uugybh" {
+  name   = "uugybh"
+  topic  = google_pubsub_topic.trgv.id
+  ack_deadline_seconds = 10
 }
