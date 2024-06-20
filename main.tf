@@ -14,14 +14,14 @@ provider "google" {
   region      = "ghvbv"
 }
 
-resource "google_pubsub_topic" "default" {
+resource "google_pubsub_topic" "topic" {
   name    = "ghgjvg"
   project = "gvvhgv"
 }
 
-resource "google_pubsub_subscription" "default" {
+resource "google_pubsub_subscription" "subscription" {
   name          = "gjgvhjgv"
-  topic         = google_pubsub_topic.default.name
+  topic         = google_pubsub_topic.topic.name
   ack_deadline_seconds = 88
   push_config {
     push_endpoint = "hgvmvv"
