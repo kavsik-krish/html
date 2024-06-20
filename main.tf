@@ -9,18 +9,22 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("keys.json")
-  project     = "hvjkjh"
-  region      = "gvvk"
+  credentials = "keys.json"
+  project     = "gvvhgv"
+  region      = "ghvbv"
 }
 
-resource "google_api_gateway_api" "hubjgv" {
-  name     = "hubjgv"
-  location = "gvvk"
-  display_name = "hubjgv"
-  config {
-    openapi_spec {
-      content = file("openapi.yaml")
-    }
+resource "google_pubsub_topic" "default" {
+  name    = "ghgjvg"
+  project = "gvvhgv"
+}
+
+resource "google_pubsub_subscription" "default" {
+  name          = "gjgvhjgv"
+  topic         = google_pubsub_topic.default.name
+  ack_deadline_seconds = 88
+  push_config {
+    push_endpoint = "hgvmvv"
   }
+  project = "gvvhgv"
 }
