@@ -10,15 +10,15 @@ terraform {
 
 provider "google" {
   credentials = file("keys.json")
-  project     = "hbbkjh"
+  project     = "hjbkkb"
+  region      = "hbb hbi"
 }
 
-resource "google_pubsub_topic" "trgv" {
-  name = "trgv"
-}
-
-resource "google_pubsub_subscription" "uugybh" {
-  name   = "uugybh"
-  topic  = google_pubsub_topic.trgv.id
-  ack_deadline_seconds = 10
+resource "google_sql_database_instance" "efhb" {
+  name         = "efhb"
+  database_version = "ubhbb"
+  region       = "hbb hbi"
+  settings {
+    tier = "hbibhj"
+  }
 }
