@@ -10,15 +10,17 @@ terraform {
 
 provider "google" {
   credentials = file("keys.json")
-  project     = "hjbkkb"
-  region      = "hbb hbi"
+  project     = "hvjkjh"
+  region      = "gvvk"
 }
 
-resource "google_sql_database_instance" "efhb" {
-  name         = "efhb"
-  database_version = "ubhbb"
-  region       = "hbb hbi"
-  settings {
-    tier = "hbibhj"
+resource "google_api_gateway_api" "hubjgv" {
+  name     = "hubjgv"
+  location = "gvvk"
+  display_name = "hubjgv"
+  config {
+    openapi_spec {
+      content = file("openapi.yaml")
+    }
   }
 }
