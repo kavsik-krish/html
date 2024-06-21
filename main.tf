@@ -1,14 +1,12 @@
 
 resource "google_cloud_run_v2_service" "default" {
-  autogenerate_revision_name = true
-  location                  = "dkjn"
-  metadata {
-    name = "kjsbk"
-  }
-  project = "macndn"
+  name     = "ncdh"
+  location = "asia-northeast1-b"
+  project  = "lumen-fir-w1"
+
   template {
     containers {
-      image = "kjankj"
+      image = "urlimage"
     }
   }
 }
