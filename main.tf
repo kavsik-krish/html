@@ -9,22 +9,16 @@ terraform {
 }
 
 provider "google" {
-  credentials = "keys.json"
-  project     = "gvvhgv"
-  region      = "ghvbv"
+  credentials = file("keys.json")
+  project     = "hjvvn"
+  region      = "hvjvh"
 }
 
-resource "google_pubsub_topic" "topic" {
-  name    = "ghgjvg"
-  project = "gvvhgv"
-}
-
-resource "google_pubsub_subscription" "subscription" {
-  name          = "gjgvhjgv"
-  topic         = google_pubsub_topic.topic.name
-  ack_deadline_seconds = 88
-  push_config {
-    push_endpoint = "hgvmvv"
+resource "google_sql_database_instance" "default" {
+  name         = "hghhj"
+  database_version = "hjvhjv"
+  region       = "hvjvh"
+  settings {
+    tier = "hvjvh"
   }
-  project = "gvvhgv"
 }
