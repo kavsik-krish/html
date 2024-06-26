@@ -13,6 +13,7 @@ completion = client.chat.completions.create(
     {"role": "user", "content": prompt}
   ]
 )
+#print
 
 print("\n" + completion.choices[0].message.content)
 
